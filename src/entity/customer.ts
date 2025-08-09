@@ -1,13 +1,14 @@
+import Address from "./address";
+
 class Customer {
   _id: string;
   _name: string;
-  _address: string;
+  _address!: Address;
   _active: boolean = true;
 
   constructor(id: string, name: string, address: string) {
     this._id = id;
     this._name = name;
-    this._address = address;
     this.validate();
   }
 
@@ -18,9 +19,6 @@ class Customer {
     if (this._name.length === 0) {
       throw new Error("Name is required");
     }
-    if (this._address.length === 0) {
-      throw new Error("Address is required");
-    }
   }
 
   changeName(name: string) {
@@ -29,7 +27,7 @@ class Customer {
   }
 
   activate() {
-    if (this._address.length === 0) {
+    if (this._address === undefined) {
       throw new Error("Address is mandatory to activate a customer");
     }
     this._active = true;
@@ -38,4 +36,10 @@ class Customer {
   deactivate() {
     this._active = false;
   }
+
+  set Address(address: Address) {
+    this._address = address;
+  }
 }
+
+let customer = new Customer("123", "John Doe", "123 Main St");
