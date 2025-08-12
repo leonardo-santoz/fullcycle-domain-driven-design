@@ -40,12 +40,12 @@ describe("Order unit tests", () => {
 
   it("should throw error when some item price is less than or equal to 0", () => {
     expect(() => {
-      let orderItem1 = new OrderItem("1", "Item 1", 100);
-      let orderItem2 = new OrderItem("2", "Item 2", 0);
+      let orderItem1 = new OrderItem("1", "Item 1", 100, 1);
+      let orderItem2 = new OrderItem("2", "Item 2", 0, 1);
 
       let order = new Order("123", "123", [orderItem1, orderItem2]);
 
       order.validate();
-    }).toThrow("Items price must be greater than zero");
+    }).toThrow("Price must be greater than zero");
   });
 });
