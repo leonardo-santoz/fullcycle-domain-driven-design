@@ -15,7 +15,7 @@ describe("Customer unit tests", () => {
   });
 
   it("should change name", () => {
-    //Ararnge
+    //Arrange
     const customer = new Customer("123", "John Doe");
 
     //Act
