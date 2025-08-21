@@ -16,6 +16,10 @@ export default class Customer {
     return this._name;
   }
 
+  get id(): string {
+    return this._id;
+  }
+
   validate() {
     if (this._id.length === 0) {
       throw new Error("Id is required");
@@ -50,4 +54,4 @@ export default class Customer {
   }
 }
 
-let customer = new Customer("123", "John Doe", "123 Main St");
+let customer = new Customer("123", "John Doe");
