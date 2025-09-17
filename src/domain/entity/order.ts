@@ -14,6 +14,10 @@ export default class Order {
     this.validate();
   }
 
+  get id(): string {
+    return this._id;
+  }
+
   total(): number {
     return this._items.reduce((acc, item) => acc + item.orderItemTotal(), 0);
   }
