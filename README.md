@@ -1,7 +1,7 @@
-# 🏗️ DDD - E-commerce Domain
+# 🏗️ Domain driven design
 
-> **Módulo de estudo em Domain-Driven Design (DDD)**  
-> Projeto desenvolvido durante o curso Full Cycle para praticar conceitos de DDD com TypeScript.
+> **Projeto de estudo em Domain-Driven Design (DDD)**  
+> Projeto desenvolvido durante o curso da Full Cycle para praticar conceitos de DDD com TypeScript.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -40,13 +40,4 @@ npm test
 ```bash
 # Executa todos os testes
 npm test
-
-## 🎓 Full Cycle
-
-Projeto desenvolvido durante o curso **Full Cycle** focado em:
-- Clean Architecture
-- SOLID Principles
-- Testes unitários
-- TypeScript avançado
-- Padrões de DDD
 
