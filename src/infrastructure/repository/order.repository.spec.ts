@@ -11,7 +11,8 @@ import ProductRepository from "./product.repository";
 import Product from "../../domain/entity/product";
 import OrderItem from "../../domain/entity/order_item";
 import Order from "../../domain/entity/order";
-import OrderRepository from './order.repository';
+import OrderRepository from "./order.repository";
+import { setupAssociations } from "../db/sequelize/associations";
 
 describe("Order repository test", () => {
   let sequelize: Sequelize;
@@ -30,6 +31,7 @@ describe("Order repository test", () => {
       OrderItemModel,
       ProductModel,
     ]);
+    setupAssociations();
     await sequelize.sync();
   });
 
@@ -76,6 +78,7 @@ describe("Order repository test", () => {
           name: orderItem.name,
           price: orderItem.price,
           quantity: orderItem.quantity,
+          product_id: "123",
           order_id: "123",
         },
       ],
