@@ -19,7 +19,17 @@ export default class EventDispatcher implements EventDispatcherInterface {
     this.eventHandlers[eventName].push(eventHandler);
   }
 
-  unregister(eventName: string, eventHandler: EventHandlerInterface): void {}
+  unregister(eventName: string, eventHandler: EventHandlerInterface): void {
+    const handlers = this.eventHandlers[eventName];
+    if (!handlers) return;
 
-  unregisterAll(): void {}
+    const index = handlers.indexOf(eventHandler);
+    if (index !== -1) {
+      handlers.splice(index, 1);
+    }
+  }
+
+  unregisterAll(): void {
+    this.eventHandlers = {};
+  }
 }
