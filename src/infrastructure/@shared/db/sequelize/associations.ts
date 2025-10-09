@@ -1,7 +1,7 @@
-import OrderModel from "./model/order.model";
-import OrderItemModel from "./model/order-item.model";
-import ProductModel from "./model/product.model";
-import CustomerModel from "./model/customer.model";
+import CustomerModel from "../../../customer/repository/sequelize/customer.model";
+import OrderItemModel from "../../../order/repository/sequelize/order-item.model";
+import OrderModel from "../../../order/repository/sequelize/order.model";
+import ProductModel from "../../../product/repository/sequelize/product.model";
 
 export function setupAssociations() {
   // Customer -> Orders

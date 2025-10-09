@@ -1,5 +1,5 @@
-import SendEmailWhenProductIsCreatedHandler from "../product/handler/send-email-when-product-is-created.handler";
-import ProductCreatedEvent from "../product/product-created.event";
+import SendEmailWhenProductIsCreatedHandler from "../../product/event/handler/send-email-when-product-is-created.handler";
+import ProductCreatedEvent from "../../product/event/product-created.event";
 import EventDispatcher from "./event-dispatcher";
 
 describe("Domain events tests", () => {
@@ -74,7 +74,7 @@ describe("Domain events tests", () => {
       name: "Product 1",
       description: "Product 1 description",
       price: 10.0,
-      email: 'despesas@empresa.com'
+      email: "despesas@empresa.com",
     });
 
     expect(
