@@ -1,11 +1,12 @@
-import Address from "../../entity/address";
-import Customer from "../../entity/customer";
-import EventDispatcher from "../@shared/event-dispatcher";
-import CustomerCreatedEvent from "./customer-created-event";
-import SendFirstEmailWhenCustomerIsCreated from "./handler/send-first-email-when-customer-is-created.handler";
-import SendEmailWhenCustomerAddressIsUpdated from "./handler/send-email-when-customer-address-is-updated.handler";
-import SendSecondEmailWhenCustomerIsCreated from "./handler/send-second-email-when-customer-is-created.handler";
+
+import EventDispatcher from '../../@shared/event/event-dispatcher';
+import Customer from '../entity/customer';
+import Address from '../vallue-object/address';
 import CustomerAddressUpdatedEvent from './customer-address-updated-event';
+import CustomerCreatedEvent from "./customer-created-event";
+import SendEmailWhenCustomerAddressIsUpdated from "./handler/send-email-when-customer-address-is-updated.handler";
+import SendFirstEmailWhenCustomerIsCreated from "./handler/send-first-email-when-customer-is-created.handler";
+import SendSecondEmailWhenCustomerIsCreated from "./handler/send-second-email-when-customer-is-created.handler";
 
 describe("Customer Domain Events", () => {
   it("should send first email when customer is created", () => {

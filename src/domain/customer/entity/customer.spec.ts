@@ -1,4 +1,4 @@
-import Address from "./address";
+import Address from "../vallue-object/address";
 import Customer from "./customer";
 
 describe("Customer unit tests", () => {
